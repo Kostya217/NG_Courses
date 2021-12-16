@@ -3,58 +3,29 @@
 #include "space_cruiser.h"
 #include "flagship.h"
 
-//
-//Я рад, что вы добрались так далеко!
-//Что ж, с этого этапа задания становятся сложнее...
-//
-//И так, очень надеюсь, что все мы любим космос, и давайте пофантазируем!
-//
-//У нас есть истребитель, у которого есть следующее
-//Свойства:
-//+ урон
-//+ здоровье
-//+ скорость
-//(Все свойства истребителя можем задать через геттеры и сеттеры)
-//
-//Так же, у нас есть огромный космический крейсер, который умеет вмещать в себя истребители. У нас должна быть функция, которая позволит добавить истребитель в крейсер.
-//У него есть свойства:
-//+ здоровье
-//+ скорость
-//+ броня
-//+ кол-во свободных мест для истребителей
-//
-//Наш космический крейсер должен уметь выдавать общую оценку боевой силы(подсчёт силы всех истребителей). И ещё он должен выдавать оценку скорости(минимальное значение скорости у истребителя)
-//
-//Ко всему этому, у нас должен быть флагман, который умеет командовать боевым флотом(флот - все крейсеры под его контролем).
-//Флагману через функцию мы можем добавить крейсер.
-//Свойства флагмана:
-//+ здоровье
-//+ броня
-//+ скорость
-//+ скорость флота
-//
-//P.S. У всех них есть что-то похожее...
-//
 using namespace std;
 int main()
 {
 	Fighter *fighter = new Fighter(10, 5, 6);
 	Fighter* fighter1 = new Fighter(25, 10, 3);
 
-	SpaceCruiser *cruiser = new SpaceCruiser(100, 10, 100, 20);
+	SpaceCruiser *cruiserOne = new SpaceCruiser(100, 10, 100, 20);
+	SpaceCruiser *cruiserTwo = new SpaceCruiser(100, 500, 100, 10);
 
-	cruiser->AddFighter(*fighter);
-	cruiser->AddFighter(*fighter1);
+	cruiserOne->AddFighter(*fighter);
+	cruiserOne->AddFighter(*fighter1);
 
-	cout << cruiser->OverallAssessmentOfCombatStrength() << endl;
-	cout << cruiser->GradeSpeed() << endl;
+	cout << "Free Place in cruiser : " << cruiserOne->GetFreePlaces() << endl;
+
+	cout << "Overall Assessment Of Combat Strength is : " << cruiserOne->OverallAssessmentOfCombatStrength() << endl;
+	cout << "Grade speed cruiser :  " << cruiserOne->GradeSpeed() << endl;
 
 	Flagship* flagship = new Flagship(40, 100, 20);
 
-	flagship->AddCruiser(*cruiser);
-	flagship->AddCruiser(*cruiser);
+	flagship->AddCruiser(*cruiserOne);
+	flagship->AddCruiser(*cruiserTwo);
 
-	cout << flagship->GetSpeedFleet();
+	cout << "Speed fleet : " << flagship->GetSpeedFleet();
 	return 0;
 }
 

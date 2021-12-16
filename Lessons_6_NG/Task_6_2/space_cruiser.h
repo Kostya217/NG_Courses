@@ -24,6 +24,7 @@ public :
 
 	void AddFighter(Fighter fighter) {
 		this->fighter[indexFighter++] = fighter;
+		freePlaces--;
 	}
 
 	int OverallAssessmentOfCombatStrength() {
