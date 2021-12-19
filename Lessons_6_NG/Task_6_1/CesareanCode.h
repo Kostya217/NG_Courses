@@ -9,10 +9,7 @@ using namespace std;
 class CesareanCode
 {
 public :
-	CesareanCode()
-	{
-
-	}
+	CesareanCode() {}
 	CesareanCode(string inputStr)
 	{
 		str = inputStr;
@@ -23,19 +20,11 @@ public :
 		key = inputKey;
 	}
 
-	void SetKey(int inputKey) {
-		key = inputKey;
-	}
-	int GetKey() {
-		return key;
-	}
+	void SetKey(int inputKey) { key = inputKey; }
+	int GetKey() { return key; }
 
-	void SetStr(string inputStr) {
-		str = inputStr;
-	}
-	string GetStr() {
-		return str;
-	}
+	void SetStr(string inputStr) { str = inputStr; }
+	string GetStr() { return str; }
 
 	string Encryption() {
 		if (key <= 0 || str == "") return "";
