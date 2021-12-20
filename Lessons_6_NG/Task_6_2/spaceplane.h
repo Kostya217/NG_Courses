@@ -6,7 +6,6 @@ class SpacePlane
 {
 public:
     SpacePlane() {}
-    ~SpacePlane(){}
     SpacePlane(int health, int speed)
     {
         this->health = health;

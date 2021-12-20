@@ -13,27 +13,19 @@ int main()
     SpaceCruiser* cruiserTwo = new SpaceCruiser(100, 500, 100, 10);
 
     cruiserOne->AddFighter(*fighterOne);
-    delete fighterOne;
-
     cruiserOne->AddFighter(*fighterTwo);
-    delete fighterTwo;
 
     cout << "Free Place in cruiser : " << cruiserOne->GetFreePlaces() << endl;
-
     cout << "Overall Assessment Of Combat Strength is : " << cruiserOne->OverallAssessmentOfCombatStrength() << endl;
     cout << "Grade speed cruiser :  " << cruiserOne->GradeSpeed() << endl;
 
     Flagship* flagship = new Flagship(40, 100, 20);
 
     flagship->AddCruiser(*cruiserOne);
-    delete cruiserOne;
-
     flagship->AddCruiser(*cruiserTwo);
-    delete cruiserTwo;
-
 
     cout << "Speed fleet : " << flagship->GetSpeedFleet();
-    delete flagship;
+
     return 0;
 }
 
