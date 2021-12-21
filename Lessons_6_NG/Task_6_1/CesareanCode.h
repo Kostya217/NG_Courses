@@ -8,7 +8,7 @@ using namespace std;
 class CesareanCode
 {
 public :
-    CesareanCode() {}
+    CesareanCode(){}
     CesareanCode(string inputStr)
     {
         str = inputStr;
@@ -25,84 +25,17 @@ public :
     void SetStr(string inputStr) { str = inputStr; }
     string GetStr() { return str; }
 
-    string Encryption() {
-        if (key <= 0 || str == "") return "";
+    string Encryption();
+    string Decryption();
+    string Decryption(string str, int key);
 
-        for (int i = 0; i < key; i++)
-        {
-            for (size_t j = 0; j < str.length(); j++)
-            {
-                if (str[j] != ' ')
-                    for (size_t k = 0; k < cesarenLower.length(); k++)
-                    {
-                        if (str[j] == cesarenLower[k]) {
-                            if ((k + 1) > (cesarenLower.length() - 1)) str[j] = cesarenLower[(cesarenLower.length() - k - 1)];
-                            else str[j] = cesarenLower[k + 1];
-                            break;
-                        }
-                        else if (str[j] == cesarenUpper[k]) {
-                            if ((k + 1) > (cesarenUpper.length() - 1)) str[j] = cesarenUpper[(cesarenUpper.length() - k - 1)];
-                            else str[j] = cesarenUpper[k + 1];
-                            break;
-                        }
-                    }
-            }
-        }
-        return str;
-    }
-
-    string Decryption() {
-        for (int i = 0; i < key; i++)
-        {
-            for (size_t j = 0; j < str.length(); j++)
-            {
-                if (str[j] != ' ')
-                    for (size_t k = 0; k < cesarenLower.length(); k++)
-                    {
-                        if (str[j] == cesarenLower[k]) {
-                            if ((k - 1) < 0) str[j] = cesarenLower[(cesarenLower.length() - k - 1)];
-                            else str[j] = cesarenLower[k - 1];
-                            break;
-                        }
-                        else if (str[j] == cesarenUpper[k]) {
-                            if ((k - 1) < 0) str[j] = cesarenUpper[(cesarenUpper.length() - k - 1)];
-                            else str[j] = cesarenUpper[k - 1];
-                            break;
-                        }
-                    }
-            }
-        }
-        return str;
-    }
-
-    string Decryption(string str, int key) {
-        for (int i = 0; i < key; i++)
-        {
-            for (size_t j = 0; j < str.length(); j++)
-            {
-                if (str[j] != ' ')
-                    for (size_t k = 0; k < cesarenLower.length(); k++)
-                    {
-                        if (str[j] == cesarenLower[k]) {
-                            if ((k - 1) < 0) str[j] = cesarenLower[(cesarenLower.length() - k - 1)];
-                            else str[j] = cesarenLower[k - 1];
-                            break;
-                        }
-                        else if (str[j] == cesarenUpper[k]) {
-                            if ((k - 1) < 0) str[j] = cesarenUpper[(cesarenUpper.length() - k - 1)];
-                            else str[j] = cesarenUpper[k - 1];
-                            break;
-                        }
-                    }
-            }
-        }
-        return str;
-    }
-    ~CesareanCode(){}
+    void CodingEncryption(string cesarean, int indexCesarean, int indexString);
+    void CodingDecryption(string cesarean, int indexCesarean, int indexString);
+    char CodingDecryption(string cesarean, string str, int indexCesarean, int indexString);
 
 private:
-    string cesarenUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    string cesarenLower = "abcdefghijklmnopqrstuvwxyz";
+    string cesareanUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    string cesareanLower = "abcdefghijklmnopqrstuvwxyz";
     string str = "";
     int key = 0;
 };
