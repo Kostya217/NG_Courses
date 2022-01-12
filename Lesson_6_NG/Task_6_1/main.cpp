@@ -3,6 +3,7 @@
 int main()
 {
     string str = "";
+    string result = "";
     int key = 0;
     cout << "Enter the string you want to encode : ";
     getline(cin, str);
@@ -16,13 +17,18 @@ int main()
 
 
     if (cesarean->GetStr() != "" || cesarean->GetKey() > 0) {
-        cout << cesarean->Encryption() << endl;
-        cout << cesarean->Decryption() << endl;
+        result = cesarean->Encryption();
+        cout << result << endl;
+        result = cesarean->Decryption();
+        cout << result << endl;
     }
-    else cout << "ERROR" << endl;
+    else {
+        cout << "ERROR" << endl;
+    }
 
     cesarean->SetStr("Euax zgyq bkxe otzkxkyzotm!");
     cesarean->SetKey(6);
-    cout << cesarean->Decryption() << endl;
+    result = cesarean->Decryption();
+    cout << result << endl;
     return 0;
 }

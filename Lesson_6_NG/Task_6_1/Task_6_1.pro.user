@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 6.0.0, 2021-12-21T19:56:06. -->
+<!-- Written by QtCreator 6.0.1, 2022-01-12T21:26:31. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -243,9 +243,8 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Task_6_12</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/NG_Courses/NG_Courses/Lessons_6_NG/Task_6_1/Task_6_1.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/NG_Courses/NG_Courses/Lessons_6_NG/Task_6_1/Task_6_1.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:D:/NG_Courses/NG_Courses/Lesson_6_NG/Task_6_1/Task_6_1.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/NG_Courses/NG_Courses/Lesson_6_NG/Task_6_1/Task_6_1.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>
