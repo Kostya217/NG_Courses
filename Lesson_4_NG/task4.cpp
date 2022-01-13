@@ -5,17 +5,15 @@ using namespace std;
 int main()
 {
     int hesh = 0;
-    const int lengthVowels = 6;
-    const int lengthStr = 255;
-    char vowels[lengthVowels] = {'A', 'E', 'I', 'O', 'U', 'Y'};
-    char str[lengthStr];
+    char vowels[6] = {'A', 'E', 'I', 'O', 'U', 'Y'};
+    char str[255];
 
     cout << "Enter string : ";
     cin.get(str, 255);
 
     for(int i = 0 ; str[i] != '\0'; i++){
         if(str[i] != ' '){
-            for(int j = 0; j < lengthVowels; j++){
+            for(int j = 0; j < 6; j++){
                 if (str[i] == vowels[j] || str[i] == vowels[j] + 32) {
                     hesh ++;
                 }
