@@ -17,13 +17,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::AntimatFilter()
 {
-
-    QString text = ui->t_antimat_filter->toPlainText();
-
-    if(text.indexOf("fuck", 0, Qt::CaseInsensitive) == -1){
+    if(ui->t_antimat_filter->toPlainText() == NULL){
         return;
     }
 
+    QString text = ui->t_antimat_filter->toPlainText();
     text.replace("fuck", "****", Qt::CaseInsensitive);
 
     QTextCursor cursor = ui->t_antimat_filter->textCursor();
