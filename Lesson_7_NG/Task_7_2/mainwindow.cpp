@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QTextEdit>
-
+#include <QDebug>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -17,10 +17,13 @@ MainWindow::~MainWindow()
 
 void MainWindow::AntimatFilter()
 {
-    if(ui->t_antimat_filter->toPlainText() == NULL){
+
+
+    if(ui->t_antimat_filter->toPlainText().indexOf("fuck", 0, Qt::CaseInsensitive) == -1){
         return;
     }
 
+    qDebug() << "i call this function";
     QString text = ui->t_antimat_filter->toPlainText();
     text.replace("fuck", "****", Qt::CaseInsensitive);
 
